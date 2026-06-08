@@ -1,0 +1,180 @@
+============================================================
+  TRACKER DE PORTAFOLIO  —  CÓMO INSTALAR Y DISTRIBUIR
+  (Guía para ti, escrita sin tecnicismos)
+============================================================
+
+Actualizado: 31 / mayo / 2026  ·  versión 0.2.0
+
+
+------------------------------------------------------------
+0)  ¡YA ESTÁ LISTO EL INSTALADOR!  (lo más importante)
+------------------------------------------------------------
+
+La app ya es un PROGRAMA DE ESCRITORIO de Windows, con su
+propio instalador. Se instala y se usa como cualquier otro
+programa: doble clic, icono en el escritorio, sin internet,
+sin Firefox, sin nada raro.
+
+El instalador ya está creado y vive aquí:
+
+    C:\Users\csp\Proyectos\portfolio-tracker\release\
+        Tracker de Portafolio Setup 0.2.0.exe
+
+Ese ÚNICO archivo .exe (pesa unos 105 MB) es TODO lo que hay
+que entregar. Quien lo reciba solo le da doble clic y listo.
+
+  * No usa internet.
+  * No guarda nada en la nube.
+  * Los datos se quedan guardados en la computadora donde se
+    use (cada quien tiene los suyos, en privado).
+
+
+------------------------------------------------------------
+1)  CÓMO INSTALARLO EN TU COMPUTADORA  (2 minutos)
+------------------------------------------------------------
+
+  1. Abre el Explorador de archivos y entra a la carpeta:
+        C:\Users\csp\Proyectos\portfolio-tracker\release
+
+  2. Doble clic en:
+        Tracker de Portafolio Setup 0.2.0.exe
+
+  3. AQUÍ APARECE UNA PANTALLA AZUL DE WINDOWS que dice algo
+     como "Windows protegió tu PC". ESTO ES NORMAL (te lo
+     explico en el punto 4). Haz lo siguiente:
+
+        a) Haz clic en el texto pequeño  "Más información".
+        b) Aparece un botón nuevo:  "Ejecutar de todas
+           formas".  Haz clic ahí.
+
+  4. El instalador se abre. Puedes elegir la carpeta donde
+     instalar (o dejar la que sugiere) y darle "Instalar".
+
+  5. Al terminar, tendrás:
+        - Un icono en el ESCRITORIO  ("Tracker de Portafolio")
+        - Una entrada en el MENÚ INICIO
+     Ábrelo desde cualquiera de los dos. ¡Ya está!
+
+
+------------------------------------------------------------
+2)  CÓMO REPARTIRLO A TUS COLEGAS
+------------------------------------------------------------
+
+Solo tienes que hacerles llegar ESE archivo .exe del punto 0.
+
+Como pesa ~105 MB, NO cabe en un correo normal. Usa una de
+estas formas para pasárselo:
+
+   - Una memoria USB.
+   - WhatsApp Web / Telegram (como documento).
+   - Google Drive / OneDrive: lo subes, compartes el enlace,
+     ellos lo descargan.
+
+Cada colega, ya con el .exe en su computadora:
+
+   1. Le da doble clic.
+   2. Hace el paso de "Más información" > "Ejecutar de todas
+      formas" (igual que tú en el punto 1).
+   3. Instala y usa.
+
+NO necesitan instalar nada más (ni Node, ni Firefox, ni
+servidores). El .exe ya trae todo dentro.
+
+
+------------------------------------------------------------
+3)  SOBRE LOS DATOS DE CADA PERSONA  (léelo, es importante)
+------------------------------------------------------------
+
+  * Los datos NO se comparten entre computadoras. Cada quien
+    captura y ve SOLO lo suyo, guardado en su propia máquina.
+    (Esto es bueno: es privado.)
+
+  * Para tener un RESPALDO o para pasar tus datos a otra
+    computadora, usa los botones de la propia app:
+        - "Exportar":  crea un archivo de respaldo (.json).
+        - "Importar":  carga ese respaldo en otra máquina.
+    Guarda ese archivo de respaldo de vez en cuando, por si
+    cambias de computadora o le pasa algo a la actual.
+
+
+------------------------------------------------------------
+4)  ¿POR QUÉ WINDOWS MUESTRA UNA ADVERTENCIA?
+------------------------------------------------------------
+
+Cuando se abre el instalador, Windows muestra esa pantalla
+azul ("Windows protegió tu PC" / "editor desconocido").
+
+   NO es un virus ni un error. Pasa porque la app no está
+   firmada con un certificado de pago (esos certificados
+   cuestan dinero cada año y son para empresas grandes).
+
+   Todas las apps pequeñas o caseras, recién creadas,
+   muestran ese aviso. Es seguro: es la misma app que
+   probamos juntos.
+
+   Por eso hay que hacer  "Más información" > "Ejecutar de
+   todas formas".  Avísales a tus colegas de este paso para
+   que no se asusten.
+
+(Si algún día quisieras quitar ese aviso del todo, habría
+ que comprar un certificado de firma de código. No es
+ necesario para uso interno entre conocidos.)
+
+
+------------------------------------------------------------
+5)  CÓMO DESINSTALARLO
+------------------------------------------------------------
+
+Como cualquier programa de Windows:
+
+   - Menú Inicio > Configuración > Aplicaciones >
+     buscar "Tracker de Portafolio" > Desinstalar.
+
+   (Desinstalar el programa NO borra tus archivos de respaldo
+    .json que hayas guardado por tu cuenta.)
+
+
+------------------------------------------------------------
+6)  SI ALGÚN DÍA CAMBIAS EL CÓDIGO Y QUIERES UN .EXE NUEVO
+------------------------------------------------------------
+
+Solo si en el futuro modificas la app y quieres volver a
+generar el instalador, abre PowerShell DENTRO de la carpeta
+del proyecto y escribe:
+
+    npm run app:build
+
+Eso hace todo solo: reconstruye la app, prepara el icono y
+crea un instalador nuevo en la carpeta:
+
+    C:\Users\csp\Proyectos\portfolio-tracker\release
+
+El archivo se llamará otra vez
+"Tracker de Portafolio Setup 0.2.0.exe" (cambia el número si
+subes la versión en el futuro).
+
+
+------------------------------------------------------------
+7)  ALTERNATIVA SIN INSTALAR  (por si alguna vez la necesitas)
+------------------------------------------------------------
+
+No la necesitas para el uso normal, pero por si acaso:
+
+La app también puede funcionar como página web local (sin
+instalar nada), abriendo la carpeta "dist" del proyecto.
+La forma más sencilla es con el navegador FIREFOX: clic
+derecho en "dist\index.html" > "Abrir con" > "Firefox".
+
+(Con Chrome o Edge, abierta así por doble clic, puede que no
+ guarde los datos. Por eso, para uso de verdad, lo mejor es
+ el instalador de escritorio de los puntos 0 a 2.)
+
+
+============================================================
+  RESUMEN EN UNA LÍNEA:
+  Entrega el archivo  "Tracker de Portafolio Setup 0.2.0.exe"
+  (carpeta "release"). Doble clic > "Más información" >
+  "Ejecutar de todas formas" > Instalar. Listo.
+
+  Cualquier duda, me dices y te guío paso a paso.
+============================================================

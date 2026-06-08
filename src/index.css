@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* F5 — Tokens semánticos por tema. La clase `.dark` en <html> (la pone
+   src/lib/theme.ts) intercambia estos valores; todo lo que use los tokens
+   `gain` / `loss` / `heading` de Tailwind o las variables de gráficas se
+   adapta solo, sin tocar React. */
+:root {
+  color-scheme: light;
+  --gain: 21 128 61; /* #15803d */
+  --loss: 185 28 28; /* #b91c1c */
+  --heading: 31 56 100; /* brand.navy #1F3864 */
+  /* Gráficas (Recharts lee estas variables como color CSS) */
+  --chart-line: #1f3864;
+  --chart-invested: #cbd5e1;
+  --chart-grid: #e2e8f0;
+  --chart-axis: #94a3b8;
+  --alloc-cripto: #1f3864;
+  --alloc-accion: #7c9ac9;
+  --alloc-renta: #e8b976;
+}
+
+.dark {
+  color-scheme: dark;
+  --gain: 74 222 128; /* #4ade80 */
+  --loss: 248 113 113; /* #f87171 */
+  --heading: 241 245 249; /* slate-100 #F1F5F9 */
+  --chart-line: #93b4e6;
+  --chart-invested: #475569;
+  --chart-grid: #334155;
+  --chart-axis: #94a3b8;
+  --alloc-cripto: #6e8fc4;
+  --alloc-accion: #7c9ac9;
+  --alloc-renta: #e8b976;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-100;
+}
+
+/* F2 — Estilos de impresión / Exportar a PDF.
+   Solo se imprime el contenido de la pantalla activa: ocultamos la barra
+   lateral, la navegación y los botones de acción (clase `app-no-print`).
+   Fondo blanco y texto oscuro (printToPdf también quita la clase `dark`). */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .app-no-print {
+    display: none !important;
+  }
+
+  /* Las tablas repiten su encabezado y no parten filas a la mitad. */
+  thead {
+    display: table-header-group;
+  }
+  tr {
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 1.6cm;
+  }
+}
+
+/* T4 — Recorrido guiado (TourOnboarding): recuadro "spotlight" que atenúa el
+   resto de la pantalla con un box-shadow gigante y pulsa un borde dorado. */
+@keyframes tour-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 9999px rgba(0, 0, 0, 0.45),
+      0 0 0 2px #f0cda1,
+      0 0 0 6px rgba(240, 205, 161, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 0 0 9999px rgba(0, 0, 0, 0.45),
+      0 0 0 2px #f0cda1,
+      0 0 0 12px rgba(240, 205, 161, 0);
+  }
+}
+
+.tour-spotlight {
+  position: fixed;
+  border-radius: 12px;
+  pointer-events: none;
+  animation: tour-pulse 1.8s ease-in-out infinite;
+}

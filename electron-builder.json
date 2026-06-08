@@ -1,0 +1,37 @@
+{
+  "appId": "com.portfoliotracker.app",
+  "productName": "Tracker de Portafolio",
+  "publish": {
+    "provider": "github",
+    "owner": "AcostaConsulting",
+    "repo": "Portfolio-Tracker",
+    "private": false
+  },
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "package.json"
+  ],
+  "win": {
+    "target": [{ "target": "nsis", "arch": ["x64"] }],
+    "icon": "build/icon.ico",
+    "signAndEditExecutable": false
+  },
+  "afterPack": "./scripts/after-pack.cjs",
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Tracker de Portafolio"
+  },
+  "asar": true,
+  "toolsets": {
+    "winCodeSign": "1.1.0"
+  }
+}

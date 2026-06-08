@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm run typecheck)",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell($env:PT_SMOKE=\"1\"; $p = Start-Process -FilePath \"release\\\\win-unpacked\\\\Tracker de Portafolio.exe\" -PassThru -Wait; \"Smoke ExitCode: $\\($p.ExitCode\\)\")",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; npm test -- price-fetcher)",
+      "PowerShell($env:Path = \"C:\\\\Program Files\\\\nodejs;\" + $env:Path; $env:PT_SMOKE = \"1\"; npm run app:smoke; Write-Output \"EXITCODE=$LASTEXITCODE\")",
+      "PowerShell(npm test 2>&1)"
+    ]
+  }
+}

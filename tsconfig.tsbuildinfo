@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/db/db.ts","./src/lib/dates.test.ts","./src/lib/dates.ts","./src/lib/fixed-income-engine.test.ts","./src/lib/fixed-income-engine.ts","./src/lib/portfolio-engine.test.ts","./src/lib/portfolio-engine.ts","./src/types/index.ts"],"errors":true,"version":"5.9.3"}

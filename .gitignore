@@ -1,0 +1,46 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+dist-ssr
+
+# Desktop app (Electron) build output
+release
+build
+dist.zip
+
+# Local / cache
+*.local
+.vite
+coverage
+
+# Editor / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Claves de licenciamiento (Sesión 4). La clave PRIVADA NUNCA va al repo ni a la
+# nube: el dueño la guarda fuera del proyecto. La pública se embebe en src/lib/license.ts.
+keys
+keys/
+*.pem
+
+*.json.bak
+portafolio-respaldo*.json
+
+portafolio-*.xlsx
+portafolio-*.json

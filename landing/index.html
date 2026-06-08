@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tracker de Portafolio — tu portafolio, 100% privado y local</title>
+    <meta
+      name="description"
+      content="App de escritorio local para llevar tus inversiones (cripto, acciones, renta fija) en una sola moneda. Sin nube, sin cuenta, sin telemetría."
+    />
+    <style>
+      :root {
+        --navy: #1f3864;
+        --gold: #f0cda1;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --line: #e2e8f0;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        color: var(--ink);
+        line-height: 1.55;
+      }
+      .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+      header {
+        background: linear-gradient(160deg, var(--navy), #16264a);
+        color: #fff;
+        padding: 64px 0 56px;
+        text-align: center;
+      }
+      .badge {
+        display: inline-block; background: var(--gold); color: var(--navy);
+        font-weight: 700; border-radius: 999px; padding: 4px 14px; font-size: 13px;
+      }
+      h1 { font-size: 40px; margin: 16px 0 8px; }
+      header p { font-size: 19px; color: #dbe3f1; max-width: 640px; margin: 0 auto 24px; }
+      .btn {
+        display: inline-block; background: var(--gold); color: var(--navy);
+        font-weight: 700; text-decoration: none; padding: 13px 26px; border-radius: 12px;
+        border: 0; font-size: 16px;
+      }
+      .btn.secondary { background: transparent; color: #fff; border: 1px solid #ffffff66; }
+      section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+      h2 { font-size: 28px; margin: 0 0 20px; color: var(--navy); }
+      .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+      .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+      .card h3 { margin: 0 0 6px; color: var(--navy); }
+      .muted { color: var(--muted); }
+      table { width: 100%; border-collapse: collapse; }
+      th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid var(--line); }
+      th { font-size: 13px; text-transform: uppercase; color: var(--muted); }
+      .price { font-size: 22px; font-weight: 700; color: var(--navy); }
+      .mxn { color: var(--muted); font-size: 14px; }
+      .yes { color: #15803d; font-weight: 700; }
+      .no { color: #cbd5e1; }
+      .placeholder {
+        border: 2px dashed var(--line); border-radius: 14px; padding: 40px;
+        text-align: center; color: var(--muted);
+      }
+      code, pre { background: #f1f5f9; border-radius: 8px; }
+      code { padding: 2px 6px; }
+      pre { padding: 14px; overflow-x: auto; }
+      .note { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 12px; padding: 14px 16px; color: #9a3412; }
+      footer { padding: 32px 0; text-align: center; color: var(--muted); font-size: 14px; }
+      details { border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; }
+      summary { font-weight: 600; cursor: pointer; color: var(--navy); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <span class="badge">100% local · privado por diseño</span>
+        <h1>Tracker de Portafolio</h1>
+        <p>
+          Lleva tus inversiones —cripto, acciones y renta fija— en una sola moneda.
+          Capturas tus operaciones; todo lo demás se calcula solo. Sin nube, sin cuenta,
+          sin telemetría.
+        </p>
+        <a class="btn" href="https://acostafconsulting.gumroad.com/l/portfoliotracker">Comprar / Descargar →</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="wrap">
+        <h2>Por qué te va a gustar</h2>
+        <div class="grid">
+          <div class="card"><h3>Privado de verdad</h3><p class="muted">Tus datos viven solo en tu equipo (IndexedDB). Cero datos personales. Cero servidores.</p></div>
+          <div class="card"><h3>Multimoneda</h3><p class="muted">Cada operación en su moneda; la app convierte a tu base con el tipo de cambio.</p></div>
+          <div class="card"><h3>Renta fija mexicana</h3><p class="muted">CETES, bonos, UDIBONOS, pagarés, SoFIPOs y Nu/ahorros con retención ISR estimada.</p></div>
+          <div class="card"><h3>Importa tu historial</h3><p class="muted">Plantilla de Excel con mapeo flexible de columnas. Empieza en minutos.</p></div>
+          <div class="card"><h3>Análisis premium</h3><p class="muted">Alertas, comisiones, rebalanceo, benchmarks y metas financieras.</p></div>
+          <div class="card"><h3>5 idiomas</h3><p class="muted">Español, inglés, francés, chino y japonés. Tema claro/oscuro.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Video y capturas</h2>
+        <div class="placeholder">▶ Espacio para el video de demo (Loom / YouTube)</div>
+        <div class="grid" style="margin-top: 18px;">
+          <div class="placeholder">Captura: Resumen</div>
+          <div class="placeholder">Captura: Renta fija</div>
+          <div class="placeholder">Captura: Análisis</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Planes</h2>
+        <table>
+          <thead>
+            <tr><th>Plan</th><th>Precio</th><th>Activos</th><th>Exportar / Precios / Alertas</th><th>Benchmarks / Metas / Rebalanceo</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Free</strong></td>
+              <td class="price">$0</td>
+              <td>15</td>
+              <td><span class="no">—</span></td>
+              <td><span class="no">—</span></td>
+            </tr>
+            <tr>
+              <td><strong>Pro</strong></td>
+              <td><span class="price">USD $24.99</span><br /><span class="mxn">≈ $450 MXN · pago único</span></td>
+              <td>30</td>
+              <td><span class="yes">✓</span></td>
+              <td><span class="no">—</span></td>
+            </tr>
+            <tr>
+              <td><strong>Premium</strong></td>
+              <td><span class="price">USD $6.99/mes</span><br /><span class="mxn">≈ $130 MXN/mes</span></td>
+              <td>∞</td>
+              <td><span class="yes">✓</span></td>
+              <td><span class="yes">✓</span></td>
+            </tr>
+            <tr>
+              <td><strong>Lifetime</strong></td>
+              <td><span class="price">USD $89.99</span><br /><span class="mxn">≈ $1,620 MXN · pago único</span></td>
+              <td>∞</td>
+              <td><span class="yes">✓</span></td>
+              <td><span class="yes">✓</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 20px;">
+          <a class="btn" href="https://acostafconsulting.gumroad.com/l/portfoliotracker">Comprar en Gumroad →</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Descarga segura</h2>
+        <div class="note">
+          ⚠️ Descarga el instalador <strong>solo desde esta página oficial</strong> (o el enlace de Gumroad).
+          No confíes en copias de otros sitios.
+        </div>
+        <p style="margin-top: 16px;">
+          Verifica que el instalador no fue alterado comparando su hash SHA-256. En
+          PowerShell (Windows):
+        </p>
+        <pre>Get-FileHash "Tracker de Portafolio Setup 0.9.0.exe" -Algorithm SHA256</pre>
+        <p>El resultado debe coincidir con (SHA-256 del instalador 0.9.0):</p>
+        <pre><code>BE28B8478F51E79C54440026921F6DC4ADF151F341CAA4B3033662ADE8F8D657</code></pre>
+        <p class="muted">
+          La app no está firmada digitalmente, así que Windows mostrará SmartScreen
+          ("editor desconocido"): elige <em>Más información → Ejecutar de todas formas</em>.
+          Esto es esperado.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Preguntas frecuentes</h2>
+        <details><summary>¿Mis datos salen de mi equipo?</summary><p class="muted">No. Todo se guarda localmente. Las únicas salidas de red son opt-in (precios en vivo y tipo de cambio histórico a demanda) y solo envían tickers, monedas y fechas.</p></details>
+        <details><summary>¿Necesito internet?</summary><p class="muted">No para usarla. Solo si activas precios en tiempo real o pides un tipo de cambio histórico.</p></details>
+        <details><summary>¿La app calcula mis impuestos?</summary><p class="muted">No. Detecta y describe eventos para que los revises con tu asesor. No calcula ISR.</p></details>
+        <details><summary>¿Cómo cambio de equipo?</summary><p class="muted">Exporta el respaldo JSON e impórtalo en el equipo nuevo. Tu licencia viaja en el respaldo.</p></details>
+        <details><summary>¿Qué pasa si pierdo mi código?</summary><p class="muted">Escríbenos con tu correo de compra y te lo reenviamos.</p></details>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        Tracker de Portafolio v0.9.0 ·
+        <a href="https://franscisco-acosta.odoo.com/contactus">Contacto</a> ·
+        Privacidad y Términos incluidos en la app.
+      </div>
+    </footer>
+  </body>
+</html>
